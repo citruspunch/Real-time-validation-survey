@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import TextInput from "./inputs/TextInput";
-import SelectInput from "./inputs/SelectInput";
 import CheckboxInput from "./inputs/CheckboxInput";
 import "./styles/Form.css";
 
