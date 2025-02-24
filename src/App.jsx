@@ -4,7 +4,7 @@ import ProgressBar from './components/ProgressBar';
 import SuccessMessage from './components/SuccessMessage';
 import './styles/App.css';
 
-function App() {
+export default function App() {
   const [progress, setProgress] = useState(0);
   const [showSuccess, setShowSuccess] = useState(false);
 
@@ -27,5 +27,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
