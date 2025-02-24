@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Form from './components/Form';
 import ProgressBar from './components/ProgressBar';
 import SuccessMessage from './components/SuccessMessage';
-import './styles/App.css';
+import './components/styles/App.css';
 
 export default function App() {
   const [progress, setProgress] = useState(0);

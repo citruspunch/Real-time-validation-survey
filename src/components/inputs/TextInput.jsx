@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/TextInput.css';
+import '../styles/TextInput.css';
 
 export default function TextInput({ name, label, value, onChange, error }) {
   return (

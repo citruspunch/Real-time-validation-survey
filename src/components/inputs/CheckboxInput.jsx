@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/CheckboxInput.css';
+import '../styles/CheckboxInput.css';
 
 export default function CheckboxInput({ name, label, checked, onChange, error }) {
   return (
