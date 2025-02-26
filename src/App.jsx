@@ -21,6 +21,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <h1> Interactive Survey </h1>
       <ProgressBar progress={progress} />
       <Form onProgress={handleProgress} onSuccess={handleSuccess} />
       {showSuccess && <SuccessMessage />}
