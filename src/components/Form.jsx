@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TextInput from "./inputs/TextInput";
 import CheckboxInput from "./inputs/CheckboxInput";
+import SelectInput from "./inputs/SelectInput";
 import "./styles/Form.css";
 
 export default function Form({ onProgress, onSuccess }) {
@@ -8,6 +9,7 @@ export default function Form({ onProgress, onSuccess }) {
     name: "",
     email: "",
     age: "",
+    gender: "",
     terms: false,
   });
 
@@ -31,6 +33,7 @@ export default function Form({ onProgress, onSuccess }) {
     if (!formData.name) newErrors.name = "Name is required";
     if (!formData.email) newErrors.email = "Email is required";
     if (!formData.age) newErrors.age = "Age is required";
+    if (!formData.gender) newErrors.gender = "Gender is required";
     if (!formData.terms) newErrors.terms = "You must accept the terms";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -83,6 +86,18 @@ export default function Form({ onProgress, onSuccess }) {
         value={formData.age}
         onChange={handleChange}
         error={errors.age}
+      />
+      <SelectInput
+        name="gender"
+        label="Gender"
+        value={formData.gender}
+        onChange={handleChange}
+        error={errors.gender}
+        options={[
+          { value: "", label: "Select your gender" },
+          { value: "male", label: "Male" },
+          { value: "female", label: "Female" },
+        ]}
       />
       <CheckboxInput
         name="terms"
